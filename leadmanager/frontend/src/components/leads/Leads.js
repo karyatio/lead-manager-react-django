@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getLeads, deleteLead } from "../../actions/leads";
@@ -16,8 +16,8 @@ class Leads extends Component {
 
   render() {
     return (
-      <Fragment>
-        <h1>Leads</h1>
+      <div>
+        <h2 className="text-center">Leads</h2>
 
         <table className="table table-striped">
           <thead>
@@ -50,7 +50,7 @@ class Leads extends Component {
             })}
           </tbody>
         </table>
-      </Fragment>
+      </div>
     );
   }
 }

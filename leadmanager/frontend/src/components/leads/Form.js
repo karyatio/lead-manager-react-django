@@ -25,12 +25,13 @@ class Form extends Component {
       message
     };
     this.props.addLead(lead);
+    this.setState({ name: "", email: "", message: "" });
   };
 
   render() {
     const { name, email, message } = this.state;
     return (
-      <div className="card card-body mt-4 mb-4">
+      <div className="card card-body">
         <h2>Add Lead</h2>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
